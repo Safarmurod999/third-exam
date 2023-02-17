@@ -358,6 +358,7 @@ ul {
   grid-template-columns: 1fr 1fr;
 }
 .project__card {
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -622,6 +623,7 @@ ul {
 }
 .testimonial__card img {
   width: auto !important;
+  margin-bottom: 20px;
 }
 .testimonial__card h4 {
   font-style: normal;
@@ -671,6 +673,71 @@ ul {
 }
 .testimonial .navigation .nav-btn:hover {
   opacity: 0.7;
+}
+
+.faq {
+  padding: 75px 0;
+  background-color: #000;
+}
+.faq h3 {
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ff5e69;
+  margin-bottom: 20px;
+}
+.faq h1 {
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 59px;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin-bottom: 120px;
+}
+.faq .accordeon {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.faq .accordeon-item {
+  width: 90%;
+  border-bottom: 1px solid rgba(229, 229, 229, 0.3);
+}
+.faq .accordeon-header {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  letter-spacing: 0.3px;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.faq .accordeon-content {
+  width: 100%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+.faq .content-inner {
+  padding: 10px;
+}
+.faq .content-inner p {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 25px;
+  letter-spacing: 0.3px;
+  color: #ffffff;
 }
 
 @media (max-width: 1020px) {
@@ -763,6 +830,7 @@ ul {
     margin: 0 auto;
   }
   .project__card {
+    margin: 0 auto;
     margin-bottom: 30px;
     align-items: center;
   }
@@ -788,6 +856,12 @@ ul {
   }
   .testimonial .main {
     grid-template-columns: 1fr;
+  }
+  .faq .accordeon {
+    grid-template-columns: 1fr;
+  }
+  .faq .accordeon-item {
+    margin: 0 auto;
   }
 }
 
