@@ -6,56 +6,209 @@
   font-family: "Roboto", sans-serif;
 }
 
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0;
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+.container {
+  max-width: 1230px;
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
+a {
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#backtop {
+  border: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 99;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+#backtop img {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
+  transition: 0.3s;
+}
+.navbar .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navbar .container__bottom {
+  transition: 0.5s;
+}
+.navbar__top {
+  padding: 13px 0;
+  background-color: #000;
+}
+.navbar__top .container p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 140%;
+  color: #fff;
+}
+.navbar__top .container span {
+  opacity: 0.3;
+}
+.navbar__menus {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navbar__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navbar__list .link {
+  font: normal 400 16px/28px "Roboto";
+  color: #000;
+  margin: 0 20px;
+}
+.navbar__list .link:hover {
+  font-weight: 600;
+}
+.navbar__join {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.navbar__side {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navbar__side .cart-btn {
+  margin-left: 28px;
+  cursor: pointer;
+}
+.navbar .toggle-btn {
+  display: none;
+}
+
+.navbar-shrink {
+  background-color: #ffffff;
+  box-shadow: -2px 14px 8px 0px rgba(250, 247, 247, 0.2);
+}
+.navbar-shrink .container__bottom {
+  padding: 14px 30px !important;
+}
+
+#offCanvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
   transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left 0.5s;
-  padding: 20px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
+@media (max-width: 1220px) {
+  .navbar__logo {
+    display: none;
   }
-  .sidenav a {
-    font-size: 18px;
+  .navbar__menus {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: left;
+    flex-wrap: nowrap;
+    top: 0;
+    left: -1500px;
+    bottom: 0;
+    width: 275px;
+    transition: 0.5s;
+    z-index: 999;
+    background-color: #ffffff;
+    flex-grow: 0;
+  }
+  .navbar__list {
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 24px;
+    margin-right: 0;
+  }
+  .navbar__list .link {
+    font-size: 1.875rem;
+    line-height: 55px;
+    color: #000;
+  }
+  .navbar__side {
+    position: relative;
+    width: 100%;
+  }
+  .navbar__side .toggle-btn:after {
+    content: url("../../images/home/Logo.svg");
+    position: absolute;
+    top: -6px;
+    left: 40px;
+  }
+  .navbar .sign:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  .navbar .toggle-btn {
+    width: 25px;
+    height: 25px;
+    display: block;
+    border: none;
+    background-color: transparent;
+  }
+  .navbar .toggle-btn img {
+    width: 100%;
+  }
+  .navbar .close-btn {
+    position: absolute;
+    z-index: 9999;
+    top: 65px;
+    right: 30px;
+  }
+  .navbar .light-dark {
+    position: absolute;
+    top: 19px;
+    right: 70px;
   }
 }
 
