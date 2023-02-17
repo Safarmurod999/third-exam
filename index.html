@@ -1,19 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Creator</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header>
-    <nav id="navbar" class="navbar" w3-include-html="nav.html"></nav>
-  </header>
-  <main>
-  <div id="offCanvas" onclick="closeNavbar()"></div>
-  </main>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="navbar" class="navbar" w3-include-html="nav.html"></nav>
+    </header>
+    <main>
+      <div id="offCanvas" onclick="closeNavbar()"></div>
+      <section id="home" class="home">
+        <div class="container">
+          <div class="home__left">
+            <h1 class="home__title">
+              <span>I design products</span>
+              that delight and inspire people.
+            </h1>
+            <p class="home__text">
+              Hi! I'm Jake, a product designer based in Berlin. I create
+              user-friendly interfaces for fast-growing startups.
+            </p>
+            <div class="home__link">
+              <a href="#">Book a call</a>
+              <a onclick="openCv()" href="#"
+                >See cv <img src="images/arrow.svg" alt="..."
+              /></a>
+            </div>
+          </div>
+
+          <div class="home__right">
+            <img src="images/home-right.png" alt="..." />
+          </div>
+        </div>
+      </section>
+      <div id="home__cv" class="home__cv">
+        <iframe
+          src="https://dweebsglobal.org/wp-content/uploads/2020/03/Resume-for-DD.pdf  "
+          frameborder="0"
+          width="100%"
+          height="500px"
+        >
+        </iframe>
+        <button onclick="closeCv()">Close</button>
+      </div>
+      <section id="service" class="service">
+        <div class="container">
+          <h3 class="service__suptitle">SERVICES</h3>
+          <h1 class="service__title">
+            Design that solves problems, one product at a time.
+          </h1>
+          <div id="service__row" class="service__row"></div>
+        </div>
+      </section>
+      <section id="project" class="project">
+        <div class="container">
+          <h3>Projects</h3>
+          <div class="project__top">
+            <h1 class="project__title">
+              I bring results. <br />
+              My clients are proof.
+            </h1>
+            <a href="#">view all projects</a>
+          </div>
+          <div class="project__carousel">
+            <div class="carousel">
+              <div class="item main">
+                <div class="project__card">
+                  <img src="images/carousel-img.png" alt="..." />
+                  <h4>Branding</h4>
+                  <h3>Soulful Rebrand</h3>
+                  <a href="#"
+                    >View Project <img src="images/arrow.svg" alt="..." />
+                  </a>
+                </div>
+                <div class="project__card">
+                  <img src="images/carousel-img.png" alt="..." />
+                  <h4>Product Design</h4>
+                  <h3>Datadash Product design</h3>
+                  <a href="#"
+                    >View Project <img src="images/arrow.svg" alt="..." />
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="project__card">
+                  <img src="images/carousel-img.png" alt="..." />
+                  <h4>Product Design</h4>
+                  <h3>Datadash Product design</h3>
+                  <a href="#"
+                    >View Project <img src="images/arrow.svg" alt="..." />
+                  </a>
+                </div>
+                <div class="project__card">
+                  <img src="images/carousel-img.png" alt="..." />
+                  <h4>Branding</h4>
+                  <h3>Soulful Rebrand</h3>
+                  <a href="#"
+                    >View Project <img src="images/arrow.svg" alt="..." />
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="project__card">
+                  <img src="images/carousel-img.png" alt="..." />
+                  <h4>Branding</h4>
+                  <h3>Soulful Rebrand</h3>
+                  <a href="#"
+                    >View Project <img src="images/arrow.svg" alt="..." />
+                  </a>
+                </div>
+                <div class="project__card">
+                  <img src="images/carousel-img.png" alt="..." />
+                  <h4>Product Design</h4>
+                  <h3>Datadash Product design</h3>
+                  <a href="#"
+                    >View Project <img src="images/arrow.svg" alt="..." />
+                  </a>
+                </div>
+              </div>
+              <div class="item">
+                <div class="project__card">
+                  <img src="images/carousel-img.png" alt="..." />
+                  <h4>Product Design</h4>
+                  <h3>Datadash Product design</h3>
+                  <a href="#"
+                    >View Project <img src="images/arrow.svg" alt="..." />
+                  </a>
+                </div>
+                <div class="project__card">
+                  <img src="images/carousel-img.png" alt="..." />
+                  <h4>Branding</h4>
+                  <h3>Soulful Rebrand</h3>
+                  <a href="#"
+                    >View Project <img src="images/arrow.svg" alt="..." />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="navigation">
+              <div class="prev nav-btn">&lt;</div>
+              <div class="next nav-btn">&gt</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="about">
+        <div class="container">
+          <h3>About me</h3>
+          <div class="about__top">
+            <h4>
+              Product Designer <br />
+              <span>That's me!</span>
+            </h4>
+            <p>
+              Over the past 12 years, I've worked with a diverse range of
+              clients, from startups to Fortune 500 companies. I love crafting
+              interfaces that delight users and help businesses grow.
+            </p>
+          </div>
+          <div id="show">
+            <img src="images/about-1.png" alt="..." />
+          </div>
+          <div class="indicators">
+            <img src="images/about-2.png" alt="..." />
+            <img src="images/about-3.png" alt="..." />
+            <img src="images/about-4.png" alt="..." />
+            <img src="images/about-5.png" alt="..." />
+            <img src="images/about-6.png" alt="..." />
+            <img src="images/about-7.png" alt="..." />
+          </div>
+        </div>
+      </section>
+      <section id="experience" class="experience">
+        <div class="container">
+          <h3>Experience</h3>
+          <div id="experience__row" class="experience__row">
+            <div id="exp__left" class="experience__left">
+              <img src="images/education.png" alt="..." />
+            </div>
+            <div id="exp__right" class="experience__right">
+              <img src="images/work.png" alt="..." />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="testimonial" class="testimonial">
+        <div class="container">
+          <h3 class="testimonial__title">testimonials</h3>
+          <div class="testimonial__carousel">
+            <div class="carousel">
+              <div class="item main">
+                <img src="images/test.png" alt="..." />
+                <div class="testimonial__card">
+                  <img src="images/quote.svg" alt="..." />
+                  <h4>
+                    Jade helped us build a software so intuitive that it didn't
+                    need a walkthrough. He solved complex problems with
+                    brilliant design.
+                  </h4>
+                  <h3>John Frankin</h3>
+                  <p>Founder, Double Bunch</p>
+                </div>
+              </div>
+              <div class="item">
+                <img src="images/test.png" alt="..." />
+                <div class="testimonial__card">
+                  <img src="images/quote.svg" alt="..." />
+                  <h4>
+                    Bade helped us build a software so intuitive that it didn't
+                    need a walkthrough. He solved complex problems with
+                    brilliant design.
+                  </h4>
+                  <h3>John Frankin</h3>
+                  <p>Founder, Double Bunch</p>
+                </div>
+              </div>
+              <div class="item">
+                <img src="images/test.png" alt="..." />
+                <div class="testimonial__card">
+                  <img src="images/quote.svg" alt="..." />
+                  <h4>
+                    Sade helped us build a software so intuitive that it didn't
+                    need a walkthrough. He solved complex problems with
+                    brilliant design.
+                  </h4>
+                  <h3>John Frankin</h3>
+                  <p>Founder, Double Bunch</p>
+                </div>
+              </div>
+              <div class="item">
+                <img src="images/test.png" alt="..." />
+                <div class="testimonial__card">
+                  <img src="images/quote.svg" alt="..." />
+                  <h4>
+                    Sade helped us build a software so intuitive that it didn't
+                    need a walkthrough. He solved complex problems with
+                    brilliant design.
+                  </h4>
+                  <h3>John Frankin</h3>
+                  <p>Founder, Double Bunch</p>
+                </div>
+              </div>
+              <div class="navigation">
+                <div class="prev nav-btn">&lt;</div>
+                <div class="next nav-btn">&gt</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="js/main.js"></script>
-</body>
+    <script src="js/card.js"></script>
+    <script src="js/carousel.js"></script>
+  </body>
 </html>
