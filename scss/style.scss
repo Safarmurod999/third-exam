@@ -61,6 +61,7 @@ $body-font: 400 16px/28px "Roboto";
   width: 100%;
   z-index: 999;
   transition: 0.3s;
+  background-color: #fff;
   .container {
     @include flex-box(row, space-between, center);
   }
