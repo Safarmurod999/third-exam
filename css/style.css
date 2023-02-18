@@ -6,6 +6,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .container {
   max-width: 1230px;
   padding: 0 15px;
